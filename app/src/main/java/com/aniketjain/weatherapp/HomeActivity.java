@@ -147,21 +147,21 @@ public class HomeActivity extends AppCompatActivity {
             binding.mainRefreshLayout.setRefreshing(false);  //for the next time
         });
         //Mic Search
-        binding.layout.micSearchId.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
-                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
-                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, Locale.getDefault());
-                intent.putExtra(RecognizerIntent.EXTRA_PROMPT,REQUEST_CODE_EXTRA_INPUT);
-                try {
-                    //it was deprecated but still work
-                    startActivityForResult(intent,REQUEST_CODE_EXTRA_INPUT);
-                }catch (Exception e){
-                    Log.d("Error Voice", "Mic Error:  "+e);
-                }
-            }
-        });
+//        binding.layout.micSearchId.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(RecognizerIntent.ACTION_RECOGNIZE_SPEECH);
+//                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL,RecognizerIntent.LANGUAGE_MODEL_FREE_FORM);
+//                intent.putExtra(RecognizerIntent.EXTRA_LANGUAGE_MODEL, Locale.getDefault());
+//                intent.putExtra(RecognizerIntent.EXTRA_PROMPT,REQUEST_CODE_EXTRA_INPUT);
+//                try {
+//                    //it was deprecated but still work
+//                    startActivityForResult(intent,REQUEST_CODE_EXTRA_INPUT);
+//                }catch (Exception e){
+//                    Log.d("Error Voice", "Mic Error:  "+e);
+//                }
+//            }
+//        });
     }
 
     private void setRefreshLayoutColor() {
